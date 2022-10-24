@@ -1,14 +1,29 @@
 import React from "react";
+import Search from "./Search";
+import Map from "./Map";
+import Forecast from "./Forecast";
+import Footer from "./Footer";
+import Weather from "./Weather";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1> Hello</h1>
-      </header>
+      <div className="row">
+        <div className="col-6">
+          <div className="card border-secondary mb-3 map-card">
+            <div className="card-body">
+              <Search />
+              <Map />
+            </div>
+          </div>
+        </div>
+        <div className="col-6">
+          <Weather />
+        </div>
+        <Forecast />
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;
