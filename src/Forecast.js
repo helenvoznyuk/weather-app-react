@@ -1,6 +1,7 @@
 import React from "react";
 import "./Forecast.css";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Forecast() {
   return (

@@ -5,6 +5,7 @@ import Forecast from "./Forecast";
 import Footer from "./Footer";
 import Weather from "./Weather";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
