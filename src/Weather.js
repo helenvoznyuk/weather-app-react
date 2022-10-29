@@ -9,23 +9,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
     setWeatherData({
+      ready: true,
       city: response.data.city,
+      date: "Monday 9:00",
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       iconUrl: response.data.condition.icon_url,
     });
-
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="row">
@@ -66,7 +65,7 @@ export default function Weather() {
                 <h1 id="entered-location">{weatherData.city}</h1>
                 <div className="wrap-date">
                   <span className="current-date" id="current-date">
-                    date
+                    {weatherData.date}
                   </span>
                 </div>
 
@@ -137,7 +136,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "dd339t2a63a34246b1fbc1f12o2030e0";
-    let city = "Paris";
+    let city = "Kyiv";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
