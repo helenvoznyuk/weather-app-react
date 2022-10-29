@@ -49,11 +49,22 @@
   margin-bottom: 13.5px;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .Weather #city-input-form {
   margin-top: 13px;
 }
 
-#celsius-link {
+.WeatherTemperature #celsius-link {
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  top: -27px;
+}
+
+.WeatherTemperature #fahrenheit-link {
   text-decoration: none;
   font-size: 20px;
   position: relative;
