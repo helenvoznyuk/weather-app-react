@@ -49,14 +49,8 @@
   margin-bottom: 13.5px;
 }
 
-.WeatherInfo #main-temperature {
-  font-size: 60px;
-  padding-bottom: 1px;
-  color: black;
-}
-
 .Weather #city-input-form {
-  margin-top: 9px;
+  margin-top: 13px;
 }
 
 #celsius-link {
@@ -71,14 +65,10 @@
 }
 
 #icon {
-  padding-right: 25px;
   display: block;
   margin: 0 auto;
   padding: 0;
-}
-
-.Weather .map-block {
-  max-width: 325px;
+  margin-top: 9px;
 }
 
 .Weather #city-input {
