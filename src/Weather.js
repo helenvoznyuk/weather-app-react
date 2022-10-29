@@ -4,6 +4,7 @@ import "./App.css";
 import Map from "./Map";
 import "./Map.css";
 import Forecast from "./Forecast";
+import FormattedDate from "./FormattedDate";
 import "./Forecast.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -15,7 +16,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.city,
-      date: "Monday 9:00",
+      date: new Date(response.data.time * 1000),
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
@@ -65,7 +66,7 @@ export default function Weather(props) {
                 <h1 id="entered-location">{weatherData.city}</h1>
                 <div className="wrap-date">
                   <span className="current-date" id="current-date">
-                    {weatherData.date}
+                    <FormattedDate date={weatherData.date} />
                   </span>
                 </div>
 
