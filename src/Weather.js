@@ -8,7 +8,7 @@ import "./Forecast.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
@@ -136,8 +136,8 @@ export default function Weather() {
     );
   } else {
     const apiKey = "dd339t2a63a34246b1fbc1f12o2030e0";
-    let city = "Kyiv";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
