@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import "./App.css";
 import Map from "./Map";
+import "./Forecast.css";
 import "./Map.css";
 import Forecast from "./Forecast";
 import WeatherInfo from "./WeatherInfo";
@@ -81,9 +82,9 @@ export default function Weather(props) {
           <div className="col-6">
             <WeatherInfo data={weatherData} />
           </div>
-
-          <Forecast />
         </div>
+
+        <Forecast />
 
         <div className="Footer">
           <div className="signature">
