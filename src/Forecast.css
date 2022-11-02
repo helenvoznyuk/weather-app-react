@@ -4,33 +4,24 @@
   margin: 0 auto;
 }
 
-.Forecast #day-one,
-.Forecast #day-two,
-.Forecast #day-three,
-.Forecast #day-four,
-.Forecast #day-five {
+#day-one {
   max-width: 150px;
   display: block;
   margin: 0 auto;
-  margin-top: 18px;
+  margin-top: 15px;
   margin-bottom: 8px;
   margin-left: 7px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
-i.icon-cloud-sun,
-i.icon-cloud,
-i.icon-sun,
-i.icon-cloud-rain,
-i.icon-cloud-sun-rain {
+#icon {
   color: grey;
-  font-size: 40px;
-
+  font-size: 30px;
   text-align: center;
   display: block;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: -10px;
+  padding-bottom: 0px;
 }
 
 span.temperature-monday {
@@ -47,12 +38,12 @@ span.temp-min {
   font-size: 15px;
 }
 
-span.monday {
+span.day {
   text-align: center;
   color: grey;
   font-size: 16px;
   display: block;
   margin: 0 auto;
   margin-top: 17px;
-  margin-bottom: 5px;
+  margin-bottom: -5px;
 }

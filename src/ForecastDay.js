@@ -33,13 +33,12 @@ export default function ForecastDay(props) {
 
   return (
     <div className="ForecastDay">
-      <span className="monday">{day()}</span>
+      <span className="day">{day()}</span>
       <div className="forecast-icon">
         <img
           src={props.data.condition.icon_url}
           id="icon"
           alt={props.data.condition.icon}
-          className="fa-solid fa-cloud-sun icon-cloud-sun"
         />
       </div>
       <span className="temp-max temperature-monday">{maxTemperature()} | </span>
