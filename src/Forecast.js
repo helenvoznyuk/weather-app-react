@@ -2,8 +2,19 @@ import React from "react";
 import "./Forecast.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
-export default function Forecast() {
+export default function Forecast(props) {
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+
+  let apiKey = "dd339t2a63a34246b1fbc1f12o2030e0";
+  let longitude = props.coordinates.longitude;
+  let latitude = props.coordinates.latitude;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
+
   return (
     <div className="Forecast">
       <div className="card border-secondary mb-3 days-card">
