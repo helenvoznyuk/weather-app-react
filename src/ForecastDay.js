@@ -37,7 +37,7 @@ export default function ForecastDay(props) {
       <div className="forecast-icon">
         <img
           src={props.data.condition.icon_url}
-          id="icon"
+          id="forecast-icon"
           alt={props.data.condition.icon}
         />
       </div>

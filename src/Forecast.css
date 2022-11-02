@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-#day-one {
+#day-one-card {
   max-width: 150px;
   display: block;
   margin: 0 auto;
@@ -14,10 +14,9 @@
   padding-bottom: 0px;
 }
 
-#icon {
+#forecast-icon {
   color: grey;
-  font-size: 30px;
-  text-align: center;
+  max-width: 80px;
   display: block;
   margin: 0 auto;
   padding-top: -10px;
