@@ -9,6 +9,7 @@ import WeatherInfo from "./WeatherInfo";
 import "./Forecast.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import { ColorRing } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -103,6 +104,30 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="Spinner">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <ColorRing
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="blocks-loading"
+          wrapperStyle={{}}
+          wrapperClass="blocks-wrapper"
+          colors={["#5090FD", "#5090FD", "#5090FD", "#5090FD", "#5090FD"]}
+        />
+      </div>
+    );
   }
 }
